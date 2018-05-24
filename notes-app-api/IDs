@@ -1,5 +1,5 @@
 User pool ID:
-
+ap-south-1_RKGltBNug
 
 Identity pool ID:
 ap-south-1:49a62f77-f744-4359-8424-252f9e755b35
@@ -7,4 +7,10 @@ ap-south-1:49a62f77-f744-4359-8424-252f9e755b35
 app client ID:
 qnm2iut1ska5fsr1mlahth6a2
 
+
+
+------------------
+Testing the API:
+
+npx aws-api-gateway-cli-test --username='admin@example.com' --password='Passw0rd!' --user-pool-id='ap-south-1_RKGltBNug' --app-client-id='qnm2iut1ska5fsr1mlahth6a2' --cognito-region='ap-south-1' --identity-pool-id='ap-south-1:49a62f77-f744-4359-8424-252f9e755b35' --invoke-url='https://72dfqcwa3g.execute-api.ap-south-1.amazonaws.com/prod' --api-gateway-region='ap-south-1' --path-template='/notes' --method='POST' --body='{"content":"hello world","attachment":"hello.jpg"}'
 
