@@ -3,7 +3,7 @@ import AWS from "aws-sdk"
 import * as dynamoDbLib from "./libs/dynamodb-lib";
 import { success, failure } from "./libs/response-lib";
 
-AWS.config.update({region: "ap-southeast-1"});
+AWS.config.update({region: "ap-south-1"});
 
 const dynamoDb = new AWS.DynamoDB.DocumentClient();
 
@@ -22,8 +22,8 @@ export async function main(event, context, callback) {
     // - 'attachment': parsed from request body
     // - 'createdAt': current Unix timestamp
     Item: {
-      userid: event.requestContext.identity.cognitoIdentityId,
-      noteid: uuid.v1(),
+      userId: event.requestContext.identity.cognitoIdentityId,
+      noteId: uuid.v1(),
       content: data.content,
       attachment: data.attachment,
       createdAt: new Date().getTime()

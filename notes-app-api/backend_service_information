@@ -1,16 +1,17 @@
+Serverless: Stack update finished...
 Service Information
 service: notes-app-api
 stage: prod
-region: ap-southeast-1
+region: ap-south-1
 stack: notes-app-api-prod
 api keys:
   None
 endpoints:
-  POST - https://tjqqys9ob0.execute-api.ap-southeast-1.amazonaws.com/prod/notes
-  GET - https://tjqqys9ob0.execute-api.ap-southeast-1.amazonaws.com/prod/notes/{id}
-  GET - https://tjqqys9ob0.execute-api.ap-southeast-1.amazonaws.com/prod/notes
-  PUT - https://tjqqys9ob0.execute-api.ap-southeast-1.amazonaws.com/prod/notes/{id}
-  DELETE - https://tjqqys9ob0.execute-api.ap-southeast-1.amazonaws.com/prod/notes/{id}
+  POST - https://72dfqcwa3g.execute-api.ap-south-1.amazonaws.com/prod/notes
+  GET - https://72dfqcwa3g.execute-api.ap-south-1.amazonaws.com/prod/notes/{id}
+  GET - https://72dfqcwa3g.execute-api.ap-south-1.amazonaws.com/prod/notes
+  PUT - https://72dfqcwa3g.execute-api.ap-south-1.amazonaws.com/prod/notes/{id}
+  DELETE - https://72dfqcwa3g.execute-api.ap-south-1.amazonaws.com/prod/notes/{id}
 functions:
   create: notes-app-api-prod-create
   get: notes-app-api-prod-get

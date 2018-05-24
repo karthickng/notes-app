@@ -2,7 +2,7 @@ import * as dynamoDbLib from "./libs/dynamodb-lib";
 import { success, failure } from "./libs/response-lib";
 import AWS from "aws-sdk"
 
-AWS.config.update({region: "ap-southeast-1"});
+AWS.config.update({region: "ap-south-1"});
 
 export async function main(event, context, callback) {
   const params = {
@@ -13,9 +13,9 @@ export async function main(event, context, callback) {
     // 'ExpressionAttributeValues' defines the value in the condition
     // - ':userid': defines 'userid' to be Identity Pool identity id
     //   of the authenticated user
-    KeyConditionExpression: "userid = :userid",
+    KeyConditionExpression: "userId = :userId",
     ExpressionAttributeValues: {
-      ":userid": event.requestContext.identity.cognitoIdentityId
+      ":userId": event.requestContext.identity.cognitoIdentityId
     }
   };
 

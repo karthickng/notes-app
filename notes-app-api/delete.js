@@ -2,7 +2,7 @@ import * as dynamoDbLib from "./libs/dynamodb-lib";
 import { success, failure } from "./libs/response-lib";
 import AWS from "aws-sdk"
 
-AWS.config.update({region: "ap-southeast-1"});
+AWS.config.update({region: "ap-south-1"});
 
 export async function main(event, context, callback) {
   const params = {
@@ -11,8 +11,8 @@ export async function main(event, context, callback) {
     // - 'userId': Identity Pool identity id of the authenticated user
     // - 'noteId': path parameter
     Key: {
-      userid: event.requestContext.identity.cognitoIdentityId,
-      noteid: event.pathParameters.id
+      userId: event.requestContext.identity.cognitoIdentityId,
+      noteId: event.pathParameters.id
     }
   };
 
