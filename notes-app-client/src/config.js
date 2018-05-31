@@ -1,16 +1,17 @@
 export default {
+  MAX_ATTACHMENT_SIZE: 5000000,
   s3: {
-    REGION: "ap-southeast-1",
-    BUCKET: "YOUR_S3_UPLOADS_BUCKET_NAME"
+    REGION: "ap-south-1",
+    BUCKET: "notes-app-uploads-mine"
   },
   apiGateway: {
-    REGION: "ap-southeast-1",
-    URL: "YOUR_API_GATEWAY_URL"
+    REGION: "ap-south-1",
+    URL: "https://72dfqcwa3g.execute-api.ap-south-1.amazonaws.com/prod"
   },
   cognito: {
-    REGION: "ap-southeast-1",
-    USER_POOL_ID: "YOUR_COGNITO_USER_POOL_ID",
-    APP_CLIENT_ID: "YOUR_COGNITO_APP_CLIENT_ID",
-    IDENTITY_POOL_ID: "YOUR_IDENTITY_POOL_ID"
+    REGION: "ap-south-1",
+    USER_POOL_ID: "ap-south-1_RKGltBNug",
+    APP_CLIENT_ID: "qnm2iut1ska5fsr1mlahth6a2",
+    IDENTITY_POOL_ID: "ap-south-1:49a62f77-f744-4359-8424-252f9e755b35"
   }
 };
